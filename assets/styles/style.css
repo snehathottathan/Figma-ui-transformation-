@@ -11,7 +11,7 @@
 
     background-size: cover;
 
-    height: 642px;
+    height: 662px;
 
     border: 1px;
 
@@ -41,6 +41,11 @@
 
 }
 
+.logo .logo-text {
+
+    padding-left: 8px;
+}
+
 .logo img {
 
     width: 52px;
@@ -59,6 +64,8 @@
     padding-top: 35px;
 
     width: 856px;
+
+    padding-bottom: 58px;
 }
 
 
@@ -66,7 +73,7 @@
 
     background-color: #FF9257;
 
-    height: 22%;
+    height: 17%;
 }
 
 .navbar ul {
@@ -97,8 +104,8 @@
 }
 
 .right-class img {
-    width: 186.04px;
-    height: 186.04px;
+    width: 170.04px;
+    height: 170.04px;
 }
 
 .content {
@@ -126,12 +133,10 @@
 
 .left-class .para {
 
+
     font-family: 'Nunito', sans-serif;
-
-    font-weight: 200;
-
-    font-size: 17.2;
-
+    font-weight: 350;
+    font-size: 15px;
     line-height: 8px;
 
 }
@@ -172,7 +177,7 @@
     font-family: 'Nunito', sans-serif;
 }
 
-.button-class .sub-btn h4{
+.button-class .sub-btn h4 {
 
     font-weight: 510;
 
@@ -201,9 +206,19 @@
 .avathar-data {
 
     width: 95px;
+
+    line-height: 14px;
 }
 
-.avathar-data .avathar-para {}
+.avathar-data .avathar-para {
+
+    font-family: #202020;
+
+    font-family: 'Nunito', sans-serif;
+
+    font-size: 14px;
+
+}
 
 .avathar-group {
 
@@ -227,4 +242,96 @@
     border: 4px solid white;
 
     margin-left: -20px;
+}
+
+.avathar-data .avathar-likes {
+
+    font-family: 'Nunito', sans-serif;
+
+    font-weight: 500;
+    font-size: 30px;
+
+
+}
+
+.stats-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #f98d4b; */
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+.stat-box {
+    flex: 1;
+    padding: 10px;
+    position: relative;
+}
+
+/* Add left and right dividers */
+.stat-box::before,
+.stat-box::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 50%;
+    width: 2px;
+    background-color: #ffcc80;
+}
+
+/* Left divider (not for the first box) */
+.stat-box:not(.first)::before {
+    left: 0;
+}
+
+/* Right divider (not for the last box) */
+.stat-box:not(.last)::after {
+    right: 0;
+}
+
+.stat-box:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 50%;
+    width: 2px;
+    background-color: #ffcc80;
+}
+
+.stat-number {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.stat-text {
+    font-size: 14px;
+}
+
+.icon {
+    width: 60px;
+    left: 24px;
+    top: 33px;
+    height: 60px;
+    background-color: #f98d4b;
+    /* Orange background */
+    border-radius: 50%;
+    /* Circular shape */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Creating the star shape similar to the image */
+.star {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    clip-path: path("M 10 0 Q 12 10 20 10 Q 12 12 10 20 Q 8 12 0 10 Q 8 8 10 0");
 }
